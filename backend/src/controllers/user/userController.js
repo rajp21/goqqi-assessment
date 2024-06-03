@@ -1,7 +1,8 @@
 
 const userController = { 
     async addUser(req, res, next){ 
-
+        // validation 
+        
     }, 
 
     async getUsers(req, res, next){ 
