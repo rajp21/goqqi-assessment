@@ -85,7 +85,7 @@ const Navbar = () => {
                     </div>
                 </li>
                 <li className="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                    className="nav-link notification-toggle nav-link-lg"><i data-feather="bell" className="bell"></i>
+                    className="nav-link notification-toggle nav-link-lg"><i className='fas fa-bell'></i>
                 </a>
                     <div className="dropdown-menu dropdown-list dropdown-menu-right pullDown">
                         <div className="dropdown-header">
