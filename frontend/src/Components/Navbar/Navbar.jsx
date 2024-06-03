@@ -37,27 +37,27 @@ const Navbar = () => {
                         </div>
                         <div className="dropdown-list-content dropdown-list-message">
                             <Link  className="dropdown-item"> <span className="dropdown-item-avatar
-                                        text-white"> <img alt="logo" src="assets/img/users/user-1.png" className="rounded-circle" />
+                                        text-white"> <img alt="logo" src="/assets/img/users/user-1.png" className="rounded-circle" />
                             </span> <span className="dropdown-item-desc"> <span className="message-user">John
                                 Deo</span>
                                     <span className="time messege-text">Please check your mail !!</span>
                                     <span className="time">2 Min Ago</span>
                                 </span>
                             </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="avatar" src="assets/img/users/user-2.png" className="rounded-circle" />
+                                <img alt="avatar" src="/assets/img/users/user-2.png" className="rounded-circle" />
                             </span> <span className="dropdown-item-desc"> <span className="message-user">Sarah
                                 Smith</span> <span className="time messege-text">Request for leave
                                     application</span>
                                     <span className="time">5 Min Ago</span>
                                 </span>
                             </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="user" src="assets/img/users/user-5.png" className="rounded-circle" />
+                                <img alt="user" src="/assets/img/users/user-5.png" className="rounded-circle" />
                             </span> <span className="dropdown-item-desc"> <span className="message-user">Jacob
                                 Ryan</span> <span className="time messege-text">Your payment invoice is
                                     generated.</span> <span className="time">12 Min Ago</span>
                                 </span>
                             </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="user-4" src="assets/img/users/user-4.png" className="rounded-circle" />
+                                <img alt="user-4" src="/assets/img/users/user-4.png" className="rounded-circle" />
                             </span> <span className="dropdown-item-desc"> <span className="message-user">Lina
                                 Smith</span> <span className="time messege-text">hii John, I have upload
                                     doc
@@ -65,7 +65,7 @@ const Navbar = () => {
                                         Min Ago</span>
                                 </span>
                             </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="round-circle" src="assets/img/users/user-3.png" className="rounded-circle" />
+                                <img alt="round-circle" src="/assets/img/users/user-3.png" className="rounded-circle" />
                             </span> <span className="dropdown-item-desc"> <span className="message-user">Jalpa
                                 Joshi</span> <span className="time messege-text">Please do as specify.
                                     Let me
@@ -73,7 +73,7 @@ const Navbar = () => {
                                         Days Ago</span>
                                 </span>
                             </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="circle" src="assets/img/users/user-2.png" className="rounded-circle" />
+                                <img alt="circle" src="/assets/img/users/user-2.png" className="rounded-circle" />
                             </span> <span className="dropdown-item-desc"> <span className="message-user">Sarah
                                 Smith</span> <span className="time messege-text">Client Requirements</span>
                                     <span className="time">2 Days Ago</span>
@@ -135,7 +135,7 @@ const Navbar = () => {
                     </div>
                 </li>
                 <li className="dropdown"><Link  data-toggle="dropdown"
-                    className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="user" src="assets/img/user.png"
+                    className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="user" src="/assets/img/user.png"
                         className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block"></span></Link>
                     <div className="dropdown-menu dropdown-menu-right pullDown">
                         <div className="dropdown-title">Hello Sarah Smith</div>

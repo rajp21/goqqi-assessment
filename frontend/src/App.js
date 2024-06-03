@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Home from './Pages/Home/Home';
 import AddUser from './Pages/AddUser/AddUser';
+import EditUser from './Pages/EditUser/EditUser';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Routes>  
                  <Route  path='/' element={<Home />} />
                  <Route  path='/add-user' element={<AddUser />} />
+                 <Route  path='/edit-user/:id' element={<EditUser />} />
               </Routes>
             </Router>
         </div>

@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 
-const AddUser = () => {
+const EditUser = () => {
 
     const formik = useFormik({ 
         initialValues: {
@@ -35,7 +35,7 @@ const AddUser = () => {
                 <form onSubmit={formik.handleSubmit}>
                     <div class="card">
                         <div class="card-header">
-                            <h4>Add User</h4>
+                            <h4>Edit User</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
@@ -120,4 +120,4 @@ const AddUser = () => {
   )
 }
 
-export default AddUser; 
+export default EditUser; 

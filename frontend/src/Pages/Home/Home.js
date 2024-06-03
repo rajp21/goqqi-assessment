@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -45,8 +46,8 @@ const Home = () => {
                                                 </div>
                                         </td>
                                         <td>
-                                            <a href="{{ route('web.edit-contact', $contact->id) }}"
-                                                class="btn btn-primary mr-2"><i class="fas fa-edit text-white "></i></a>
+                                            <Link to={`/edit-user/${1}`}
+                                                class="btn btn-primary mr-2"><i class="fas fa-edit text-white "></i></Link>
                                                 
 
                                             <a href="{{ route('web.delete-contact', $contact->id) }}"
