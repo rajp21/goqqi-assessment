@@ -14,33 +14,14 @@ const Sidebar = () => {
       <ul className="sidebar-menu">
         <li className="menu-header">Main</li>
         <li className="dropdown active">
-          <Link href="index.html" className="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></Link>
+          <Link to="/" className="nav-link"><i className='fas fa-fire'></i><span>Dashboard</span></Link>
         </li>
+
         <li className="dropdown">
-          <Link  className="menu-toggle nav-link has-dropdown"><i
-              data-feather="briefcase"></i><span>Widgets</span></Link>
-          <ul className="dropdown-menu">
-            <li><Link className="nav-link" href="widget-chart.html">Chart Widgets</Link></li>
-            <li><Link className="nav-link" href="widget-data.html">Data Widgets</Link></li>
-          </ul>
+          <Link to="/add-user" className="nav-link"><i className='fas fa-user-plus'></i><span>Add User</span></Link>
         </li>
-        <li className="dropdown">
-          <Link  className="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Apps</span></Link>
-          <ul className="dropdown-menu">
-            <li><Link className="nav-link" href="chat.html">Chat</Link></li>
-            <li><Link className="nav-link" href="portfolio.html">Portfolio</Link></li>
-            <li><Link className="nav-link" href="blog.html">Blog</Link></li>
-            <li><Link className="nav-link" href="calendar.html">Calendar</Link></li>
-          </ul>
-        </li>
-        <li className="dropdown">
-          <Link  className="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Email</span></Link>
-          <ul className="dropdown-menu">
-            <li><Link className="nav-link" href="email-inbox.html">Inbox</Link></li>
-            <li><Link className="nav-link" href="email-compose.html">Compose</Link></li>
-            <li><Link className="nav-link" href="email-read.html">read</Link></li>
-          </ul>
-        </li>    
+        
+         
       </ul>
     </aside>
   </div>

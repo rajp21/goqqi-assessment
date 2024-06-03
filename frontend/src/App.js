@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Home from './Pages/Home/Home';
+import AddUser from './Pages/AddUser/AddUser';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
               <Sidebar />
               <Routes>  
                  <Route  path='/' element={<Home />} />
+                 <Route  path='/add-user' element={<AddUser />} />
               </Routes>
             </Router>
         </div>

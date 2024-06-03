@@ -1,3 +1,7 @@
 .navbar i { 
     color: "#212529" !important; 
 }
+
+.required-input-field, .invalid-feedback-error{ 
+    color: red; 
+}
