@@ -209,7 +209,7 @@ const userController = {
             success: true, 
             message: "user deleted successfully"
         });     
-    }, 
+    }
 }
 
 export default userController; 
