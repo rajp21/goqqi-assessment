@@ -4,7 +4,7 @@ import errorHandler from './src/middlewares/errorHandler';
 import apiRouter from './src/routes/api';
 import sequelize from './src/config/db';
 import User from './src/models/user.model';
-
+import cors from 'cors'; 
 
 const app = express(); 
 const port = APP_PORT ? APP_PORT : 5001; 
@@ -30,6 +30,20 @@ sequelize.authenticate().then(() => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
+
+// write a cors options for me 
+
+const corsOptions = {
+   origin: 'http://localhost:3000', 
+   methods: ['GET', 'POST','PUT', 'DELETE'], 
+   allowedHeaders: ['Content-Type', 'Authorization'],
+   exposedHeaders: ['Content-Length'], 
+   credentials: true, 
+   maxAge: 3600 
+ };
+ 
+
+app.use(cors(corsOptions)); 
 
 
 app.use('/api', apiRouter);

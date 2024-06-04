@@ -1,7 +1,43 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
-
+import React , { useState, useEffect } from 'react';
+import { deleteUser, getAllUsers } from '../../Http';
+import notyf from '../../Components/Notyf/Notyf';
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
+
+  const [users, setUsers] = useState([]); 
+ const navigate = useNavigate(); 
+
+    const fetchUsers = async ()  => { 
+        try{ 
+            let allUsers = await getAllUsers(); 
+            setUsers(allUsers.data.users); 
+
+        }catch(error){ 
+            console.log(error); 
+            notyf.error("Something went wrong"); 
+        }
+    }
+
+  useEffect(() => { 
+        fetchUsers();
+  }, []); 
+
+
+  // delete user 
+
+  async function deletRecord(id){ 
+   
+        try{ 
+            await deleteUser(id);
+            notyf.success('User updated successfully'); 
+            fetchUsers(); 
+        }catch(e){ 
+            console.log(e); 
+            notyf.error('Something went wrong'); 
+        }
+  } 
+
   return (
     <div class="main-content">
     <section class="section">
@@ -31,29 +67,37 @@ const Home = () => {
                                 </tr>
                              
 
-                                    <tr>
-                                        <td class="p-0 text-center">
-                                         1
-                                        </td>
-                                        <td>Raj</td>
+                                    {
+                                        users.lengeth  === 0? <h2>No Data Available</h2>: 
 
-                                        <td>raj430499@gmail.com</td>
-                                        <td>8830194017</td>
-                                        <td>
-                                            <div
-                                                className=""> 
-                                                06/02/2002
-                                                </div>
-                                        </td>
-                                        <td>
-                                            <Link to={`/edit-user/${1}`}
-                                                class="btn btn-primary mr-2"><i class="fas fa-edit text-white "></i></Link>
-                                                
-
-                                            <a href="{{ route('web.delete-contact', $contact->id) }}"
-                                                class="btn btn-danger"><i class="fas fa-trash text-white"></i></a>
-                                        </td>
-                                    </tr>
+                                        users.map((user, ind) => (
+                                            <tr>
+                                            <td class="p-0 text-center">
+                                              {ind+1}
+                                            </td>
+                                            <td>{user.name}</td>
+    
+                                            <td>{user.email}</td>
+                                            <td>{user.password}</td>
+                                            <td>
+                                                <div
+                                                    className=""> 
+                                                    06/02/2002
+                                                    </div>
+                                            </td>
+                                            <td>
+                                                <Link to={`/edit-user/${user.id}`}
+                                                    class="btn btn-primary mr-2"><i class="fas fa-edit text-white "></i></Link>
+                                                    
+    
+                                                <button onClick={e => deletRecord(user.id)}
+                                                    class="btn btn-danger"><i class="fas fa-trash text-white"></i></button>
+                                            </td>
+                                        </tr>
+                                         ))
+                                    
+                                    }
+                                    
 
                                     
 

@@ -1,30 +1,39 @@
 import React from 'react'; 
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { saveUser } from '../../Http';
+import notyf from '../../Components/Notyf/Notyf';
+
 
 
 const AddUser = () => {
 
+    
     const formik = useFormik({ 
         initialValues: {
-            firstName: '',
+            name: '',
             email: '',
             password: '',
             dob: '',
         },
 
         validationSchema:Yup.object().shape({ 
-            firstName: Yup.string().required('First Name is required'),
+            name: Yup.string().required('First Name is required'),
             email: Yup.string().email('Invalid email format').required('Email is required'),
             password: Yup.string().required('Password is required'),
             dob: Yup.string().required('Date of Birth is required'),
         }),
 
-        onSubmit: (values) => {
-            console.log(values);
+        onSubmit:  async (values, { resetForm }) => {
+            try{
+                await saveUser(values); 
+                notyf.success("User Added Successfully"); 
+                resetForm(); 
+            }catch(error){ 
+                notyf.error(error?.response?.data?.message); 
+            }
         }
     }); 
-
  
 
   return (
@@ -41,9 +50,9 @@ const AddUser = () => {
                             <div class="form-group">
                                 <label>Name  <span className='required-input-field'>*</span></label>
                                 <input type="text" class="form-control"
-                                   name="firstName" 
+                                   name="name" 
                                    onChange={formik.handleChange}
-                                   value={formik.values.firstName}
+                                   value={formik.values.name}
                                    placeholder='Enter Your Name'
                                     
                                 />

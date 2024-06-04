@@ -179,28 +179,13 @@ const userController = {
     }, 
 
     async deleteUser(req, res, next){ 
-        const schema = Joi.object({ 
-            userId: Joi.number()
-            .integer() 
-            .positive() 
-            .required()
-            .messages({
-              'number.base': 'User ID must be a number',
-              'number.integer': 'User ID must be an integer',
-              'number.positive': 'User ID must be a positive number',
-              'any.required': 'User ID is required'
-            })
-        }); 
-
-
-        const {error} = schema.validate(req.body); 
-
-        if(error) return next(error); 
-
+        
+        const {id} = req.params; 
+        console.log(id); 
         let rowsAffected; 
 
         try{    
-           rowsAffected = await User.destroy({ where: { id: req.body.userId } }); 
+           rowsAffected = await User.destroy({ where: { id: id } }); 
         }catch(error) {
             return next(error); 
         }
@@ -209,6 +194,22 @@ const userController = {
             success: true, 
             message: "user deleted successfully"
         });     
+    }, 
+
+    async getUser(req, res, next){
+        const {id}=  req.params; 
+        let user; 
+        try{ 
+            user =  await User.findOne({where: {id: id}}); 
+            return res.status(200).json({
+                success: true, 
+                user
+            }); 
+        }catch(error){ 
+            return next(error); 
+        }
+
+
     }
 }
 
