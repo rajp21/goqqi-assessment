@@ -10,6 +10,12 @@ const errorHandler = (err, req, res, next) => {
         ...(DEBUG_MODE === 'true' && { originalError: err.message })
     }
 
+    // invalid JSON 
+    if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+        data.error='Bad JSON syntax',
+        statusCode=400
+    }   
+
     if(err instanceof ValidationError){
         statusCode = 422; 
         data.message = err.message
