@@ -7,7 +7,7 @@ Follow these steps to set up the project:
 
 
 2. **Navigate to the Frontend Folder:**
-   ```bash
+     ```bash
    cd frontend
    ```
 
