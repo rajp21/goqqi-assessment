@@ -58,8 +58,8 @@ const AddUser = () => {
                                 />
 
                                     <div class="invalid-feedback-error" >
-                                    {formik.touched.firstName && formik.errors.firstName ? (
-                                        <div>{formik.errors.firstName}</div>
+                                    {formik.touched.name && formik.errors.name ? (
+                                        <div>{formik.errors.name}</div>
                                     ) : null}  
                                     </div>
                             </div>

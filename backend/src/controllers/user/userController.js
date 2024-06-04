@@ -78,7 +78,6 @@ const userController = {
             return next(error); 
         }
         
-
         return res.status(200).json({
             success: true, 
             user: user
@@ -181,7 +180,6 @@ const userController = {
     async deleteUser(req, res, next){ 
         
         const {id} = req.params; 
-        console.log(id); 
         let rowsAffected; 
 
         try{    

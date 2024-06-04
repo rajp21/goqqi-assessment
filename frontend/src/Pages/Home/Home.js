@@ -2,12 +2,11 @@ import { Link } from 'react-router-dom';
 import React , { useState, useEffect } from 'react';
 import { deleteUser, getAllUsers } from '../../Http';
 import notyf from '../../Components/Notyf/Notyf';
-import { useNavigate } from 'react-router-dom';
 const Home = () => {
 
   const [users, setUsers] = useState([]); 
- const navigate = useNavigate(); 
-
+    
+    // fetching the users from backend
     const fetchUsers = async ()  => { 
         try{ 
             let allUsers = await getAllUsers(); 

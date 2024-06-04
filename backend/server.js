@@ -42,6 +42,7 @@ const corsOptions = {
    maxAge: 3600 
  };
  
+ 
 
 app.use(cors(corsOptions)); 
 

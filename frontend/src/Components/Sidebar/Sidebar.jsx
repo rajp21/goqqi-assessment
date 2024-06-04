@@ -9,8 +9,8 @@ const Sidebar = () => {
     <div className="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
       <div className="sidebar-brand">
-        <Link to="/"> <img alt="logo" src="assets/img/logo.png" className="header-logo" /> <span
-            className="logo-name">Otika</span>
+        <Link to="/"> <img alt="logo" src="/assets/img/logo.png" className="header-logo" /> <span
+            className="logo-name"></span>
         </Link>
       </div>
       <ul className="sidebar-menu">

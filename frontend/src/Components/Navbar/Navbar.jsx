@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className="form-inline mr-auto">
                 <ul className="navbar-nav mr-3">
                     <li><Link  data-toggle="sidebar" className="nav-link nav-link-lg
-                                collapse-btn"> <i data-feather="align-justify"></i></Link></li>
+                                collapse-btn"> <i className='fas fa-bars' style={{color: 'black'}}></i></Link></li>
                     <li><Link  className="nav-link nav-link-lg fullscreen-btn">
                         <i data-feather="maximize"></i>
                     </Link></li>
@@ -23,136 +23,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            <ul className="navbar-nav navbar-right">
-                <li className="dropdown dropdown-list-toggle"><Link  data-toggle="dropdown"
-                    className="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
-                    <span className="badge headerBadge1">
-                        6 </span> </Link>
-                    <div className="dropdown-menu dropdown-list dropdown-menu-right pullDown">
-                        <div className="dropdown-header">
-                            Messages
-                            <div className="float-right">
-                                <Link >Mark All As Read</Link>
-                            </div>
-                        </div>
-                        <div className="dropdown-list-content dropdown-list-message">
-                            <Link  className="dropdown-item"> <span className="dropdown-item-avatar
-                                        text-white"> <img alt="logo" src="/assets/img/users/user-1.png" className="rounded-circle" />
-                            </span> <span className="dropdown-item-desc"> <span className="message-user">John
-                                Deo</span>
-                                    <span className="time messege-text">Please check your mail !!</span>
-                                    <span className="time">2 Min Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="avatar" src="/assets/img/users/user-2.png" className="rounded-circle" />
-                            </span> <span className="dropdown-item-desc"> <span className="message-user">Sarah
-                                Smith</span> <span className="time messege-text">Request for leave
-                                    application</span>
-                                    <span className="time">5 Min Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="user" src="/assets/img/users/user-5.png" className="rounded-circle" />
-                            </span> <span className="dropdown-item-desc"> <span className="message-user">Jacob
-                                Ryan</span> <span className="time messege-text">Your payment invoice is
-                                    generated.</span> <span className="time">12 Min Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="user-4" src="/assets/img/users/user-4.png" className="rounded-circle" />
-                            </span> <span className="dropdown-item-desc"> <span className="message-user">Lina
-                                Smith</span> <span className="time messege-text">hii John, I have upload
-                                    doc
-                                    related to task.</span> <span className="time">30
-                                        Min Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="round-circle" src="/assets/img/users/user-3.png" className="rounded-circle" />
-                            </span> <span className="dropdown-item-desc"> <span className="message-user">Jalpa
-                                Joshi</span> <span className="time messege-text">Please do as specify.
-                                    Let me
-                                    know if you have any query.</span> <span className="time">1
-                                        Days Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                                <img alt="circle" src="/assets/img/users/user-2.png" className="rounded-circle" />
-                            </span> <span className="dropdown-item-desc"> <span className="message-user">Sarah
-                                Smith</span> <span className="time messege-text">Client Requirements</span>
-                                    <span className="time">2 Days Ago</span>
-                                </span>
-                            </Link>
-                        </div>
-                        <div className="dropdown-footer text-center">
-                            <Link >View All <i className="fas fa-chevron-right"></i></Link>
-                        </div>
-                    </div>
-                </li>
-                <li className="dropdown dropdown-list-toggle"><Link  data-toggle="dropdown"
-                    className="nav-link notification-toggle nav-link-lg"><i className='fas fa-bell'></i>
-                </Link>
-                    <div className="dropdown-menu dropdown-list dropdown-menu-right pullDown">
-                        <div className="dropdown-header">
-                            Notifications
-                            <div className="float-right">
-                                <Link >Mark All As Read</Link>
-                            </div>
-                        </div>
-                        <div className="dropdown-list-content dropdown-list-icons">
-                            <Link  className="dropdown-item dropdown-item-unread"> <span
-                                className="dropdown-item-icon bg-primary text-white"> <i className="fas
-                                            fa-code"></i>
-                            </span> <span className="dropdown-item-desc"> Template update is
-                                available now! <span className="time">2 Min
-                                    Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-icon bg-info text-white"> <i className="far
-                                            fa-user"></i>
-                            </span> <span className="dropdown-item-desc"> <b>You</b> and <b>Dedik
-                                Sugiharto</b> are now friends <span className="time">10 Hours
-                                    Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-icon bg-success text-white"> <i
-                                className="fas
-                                            fa-check"></i>
-                            </span> <span className="dropdown-item-desc"> <b>Kusnaedi</b> has
-                                moved task <b>Fix bug header</b> to <b>Done</b> <span className="time">12
-                                    Hours
-                                    Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-icon bg-danger text-white"> <i
-                                className="fas fa-exclamation-triangle"></i>
-                            </span> <span className="dropdown-item-desc"> Low disk space. Let's
-                                clean it! <span className="time">17 Hours Ago</span>
-                                </span>
-                            </Link> <Link  className="dropdown-item"> <span className="dropdown-item-icon bg-info text-white"> <i className="fas
-                                            fa-bell"></i>
-                            </span> <span className="dropdown-item-desc"> Welcome to Otika
-                                template! <span className="time">Yesterday</span>
-                                </span>
-                            </Link>
-                        </div>
-                        <div className="dropdown-footer text-center">
-                            <Link >View All <i className="fas fa-chevron-right"></i></Link>
-                        </div>
-                    </div>
-                </li>
-                <li className="dropdown"><Link  data-toggle="dropdown"
-                    className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="user" src="/assets/img/user.png"
-                        className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block"></span></Link>
-                    <div className="dropdown-menu dropdown-menu-right pullDown">
-                        <div className="dropdown-title">Hello Sarah Smith</div>
-                        <Link href="profile.html" className="dropdown-item has-icon"> <i className="far
-                                    fa-user"></i> Profile
-                        </Link> <Link href="timeline.html" className="dropdown-item has-icon"> <i className="fas fa-bolt"></i>
-                            Activities
-                        </Link> <Link  className="dropdown-item has-icon"> <i className="fas fa-cog"></i>
-                            Settings
-                        </Link>
-                        <div className="dropdown-divider"></div>
-                        <Link href="auth-login.html" className="dropdown-item has-icon text-danger"> <i className="fas fa-sign-out-alt"></i>
-                            Logout
-                        </Link>
-                    </div>
-                </li>
-            </ul>
+
         </nav>
     )
 }

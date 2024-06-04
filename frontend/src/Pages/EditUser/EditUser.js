@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Notyf } from 'notyf';
 import { getSingleUser, updateUser } from '../../Http';
 import { useParams } from 'react-router-dom';
 import notyf from '../../Components/Notyf/Notyf';
@@ -44,7 +43,6 @@ const EditUser = () => {
 
         getUser(); 
     }, []); 
-
 
 
     const formik = useFormik({ 
