@@ -10,5 +10,6 @@ export const  {
     DB_USERNAME,
     DB_PASSWORD, 
     DB_NAME, 
-    DB_DILECT
+    DB_DILECT, 
+    APP_FRONTEND_URL
 } = process.env;
