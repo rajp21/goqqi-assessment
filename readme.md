@@ -33,7 +33,7 @@ Follow these steps to set up the project:
    Open the `.env` file and add the following configurations:
    - **App Port:** Specify the port on which the app should run.
    - **APP Frontend URL:** Mention the URL of your frontend app. By default, it is set to `http://localhost:3000`. Modify it if your port is different.
-   - **Database Configurations:** Enter database configurations including host, port, database name, username, and password.
+   - **Database Configurations:** Enter database configurations including host, port, database name, username, and password. Also you 
 
 8. **Run Commands:**
    - For development:
@@ -47,6 +47,12 @@ Follow these steps to set up the project:
 
 9. **Update Backend URL in Frontend:**
    In the `frontend/Http/index.js` file, add the backend app URL. By default, the backend is set on port 5000, so the URL is `http://localhost:5000/api`. Modify the URL accordingly if you change the port.
+
+10. **start frontend  server**
+    - Navigate to frontend directory and run following command
+     ```bash
+        npm start
+     ```
 
 Setup is completed. Happy coding!
 ```
